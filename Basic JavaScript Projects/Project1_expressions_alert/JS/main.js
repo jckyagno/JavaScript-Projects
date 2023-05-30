@@ -14,6 +14,19 @@ document.write((Sent1) + (Sent2));
 //Writing an expression
 document.write(3+4);
 
+function My_First_Function () {
+    //Defining a variable and giving it a string value
+    var str = "This is the button text!";
+    //Putting the value of the variable into the 
+    //HTML elementFromPoint with the "Button_Text" id
+    document.getElementById("Button_Text").innerHTML = str;
+}
+
+//Display date in <p> in HTML
+function displayDate() {
+    document.getElementById("demo").innerHTML = Date();
+}
+
 /*
 
 window.alert("Hello, World!");
