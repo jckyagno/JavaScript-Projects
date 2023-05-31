@@ -59,7 +59,7 @@ function myRandomFunction() {                                                   
     var x = Math.random() * 100;                                                                            //Assigned Math.random() times 100 to variable, named x
     document.getElementById("Random").innerHTML = "Random number? Fine. "                                   //Combined text strings with var x
      + x + "." +
-    "<br> Rounded to the nearest integer is " + Math.round(x);                                              //Used math method "Math.round()" to round x
+    "<br> Rounded to the nearest integer is " + Math.round(x) + ".";                                              //Used math method "Math.round()" to round x
 }                                                                                                           //to its nearest integer
 
 function myPiFunction() {                                                                                   //Pi Function
