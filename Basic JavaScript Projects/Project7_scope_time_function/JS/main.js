@@ -83,3 +83,12 @@ function Time_function() {                                                      
     }
     document.getElementById("Time_of_day").innerHTML = Reply;                                   //Linking id to "Time_of_day" to display in <p> HTML.
 }
+
+function full_Sentence() {
+    var part_1 = "I "
+    var part_2 = "am "
+    var part_3 = "really "
+    var part_4 = "hungry."
+    var whole_sentence = part_1.concat(part_2, part_3, part_4);
+    document.getElementById("Concatenate").innerHTML = whole_sentence;
+}
