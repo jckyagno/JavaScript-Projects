@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+    </head>
+
+    <body id="body">
+
+        <button onclick="myFunction()">Click here!</button>
+        <p id="result1"></p>
+        <script>
+            function myFunction () {
+                var x = 2 * 4
+                document.getElementById("result1").innerHTML = x;
+            }
+        </script>
+
+        <p id="result2"></p>
+        
+        <script>
+            myArrowFunction = (y => y * 2);
+            document.getElementById('result2').innerHTML = myArrowFunction(6);
+        </script>
+        
+
+        <p id="displayCar"></p>
+
+        <script>
+            var car;
+            car = (val) => "These are my favorite car brands: " + val;
+            document.getElementById('displayCar').innerHTML = car("Honda, Ford, Nissan");
+        </script>
+
+
+
+    </body>
+
+</html>
