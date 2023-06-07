@@ -29,12 +29,14 @@ function placeXOrO(squareNumber) {
             //If active player is 'X' change it to 'O'.
             activePlayer = 'O';
             //If active player is anything other than 'X'
-            //This function plays placement sound.
+            //This function plays placement sound. 
+            //Modified to play a different sound for player turn.
             audio('./media/place_2.mp3');
         } else {
             //Change the activePlayer to 'X'
             activePlayer = 'X';
             //This function plays placement sound.
+            //Modified to play a different sound for computer turn.
             audio('./media/place_3.mp3');
         }
 
@@ -108,6 +110,7 @@ function checkWinConditions() {
     //9 squares are selected, the code executes.
     else if (selectedSquares.length >= 9) {
         //This function plays the tie game sound.
+        //Modified to play a different sound than provided default sound.
         audio('./media/tie_2.mp3');
         //This function sets a .3 second time before the resetGame is called.
         setTimeout(function() { resetGame(); }, 500);
@@ -207,6 +210,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     //This line disallows clicking while the win sound is playing
     disableClick();
     //This line plays the win sounds.
+    //Modified to play a different sound than provided default sound.
     audio('./media/winGame_2.mp3');
     //This line calls our main animation loop.
     animateLineDrawing();
