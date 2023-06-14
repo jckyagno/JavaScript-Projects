@@ -1,0 +1,136 @@
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-size: 10vw;
+    color: red;
+    animation: mymove 5s infinite;
+    position: relative;
+}
+
+#slideshow {
+    margin: 50px auto;
+    position: relative;
+    width: 200px;
+    height: 150px;
+    padding: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+#slideshow > div {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+}
+
+img {
+    width: 200px;
+}
+
+.box {
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    margin: auto;
+    animation: zoominoutsinglefeatured 15s forwards;
+}
+
+@keyframes mymove {
+    from {top: 0px;}
+    to {top: 200px;}
+}
+
+@keyframes zoominoutsinglefeatured {
+    0% {
+        transform: scale(1,1);
+    }
+    50% {
+        transform: scale(2,2);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+
+body {
+    opacity: 1;
+    transition: 1s opacity;
+    box-sizing: border-box;
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
+/* Button used to open the contact form - fixed at the bottom of page */
+
+.open-button {
+    background-color: green;
+    color: white;
+    padding: 20px 20px;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 25px;
+    right: 30px;
+    width: 300px
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    z-index: 9;
+    border: 2px solid grey;
+}
+
+/* Add styles to the form container */
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: antiquewhite;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+    width: 90%;
+    padding: 15px;
+    margin: 5px 0 20px 0;
+    border: none;
+    background-color: white;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+    background-color:green;
+    color: white;
+    padding: 20px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Add a background color to the cancel button */
+.form-container .cancel {
+    background-color: red;
+}
+
+/* Add some hover effects to buttons */
+
+.form-container .btn:hover, open-button:hover{
+    background-color: chartreuse;
+} 
